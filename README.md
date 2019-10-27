@@ -8,4 +8,4 @@ https://tylerxhobbs.com/essays/2017/a-generative-approach-to-simulating-watercol
 
 |         Original          |        Output;        |
 | :-----------------------: | :-------------------: |
-| ![original](original.jpg) | ![output](output.png) |
+| ![original](original.jpg) | ![output](output.gif) |
