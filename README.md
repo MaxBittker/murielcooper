@@ -6,4 +6,4 @@ http://www.inventinginteractive.com/2010/10/14/happy-birthday-media-lab/
 
 |         Original          |        Output;        |
 | :-----------------------: | :-------------------: |
-| ![original](original.gif) | ![output](output.gif) |
+| ![original](original.jpg) | ![output](output.png) |
