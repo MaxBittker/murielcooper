@@ -1,9 +1,8 @@
 <meta charset="utf-8"/>
 
-# Ligne Extravegante
+# Muriel Cooper & Jacqueline Casey
 
-John Whitney "Catalog" 1961
-Interperted for 2019 SFPC recreating the past
+http://www.inventinginteractive.com/2010/10/14/happy-birthday-media-lab/
 
 |         Original          |        Output;        |
 | :-----------------------: | :-------------------: |
