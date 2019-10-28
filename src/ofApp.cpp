@@ -29,14 +29,14 @@ void ofApp::draw() {
   // ofEnableDepthTest();
 
   std::string a = "ssffppcc";
-  // std::string a = "tittties";
+  // std::string a = "titties";
 
   // vector<ofPath> paths = font.getStringAsPoints("Abc", true, false);
   ofSetColor(255, 0, 0);
   ofSeedRandom(mouseX);
   ofTranslate(ofGetWidth() / 2 - 600, ofGetHeight() / 2 + 100);
 
-  for (int f = 1; f <= 8; f++) {
+  for (int f = 1; f <= a.size(); f++) {
     ofTranslate(90, 0);
 
     std::string str2 = a.substr(f - 1, 1);
@@ -158,8 +158,8 @@ void ofApp::keyPressed(int key) {
   // ofGetKeyPressed
   // string n;
   // text.
-  // sprintf(text.c_str(), "%d", key);
-  // text.append(string(key));
+  // sprintf(char(key), "%d", key);
+  // text.append(char(key));
 }
 
 //--------------------------------------------------------------
