@@ -22,18 +22,12 @@ void ofApp::update() {}
 void ofApp::draw() {
 
   ofBackground(255);
-  // ofEnableBlendMode(OF_BLENDMODE_SCREEN);
-  // ofSetColor(255, 255, 255, 255);
-  // ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-
-  // ofEnableDepthTest();
 
   std::string a = "ssffppcc";
   // std::string a = "titties";
 
-  // vector<ofPath> paths = font.getStringAsPoints("Abc", true, false);
   ofSetColor(255, 0, 0);
-  ofSeedRandom(mouseX);
+  ofSeedRandom(0);
   ofTranslate(ofGetWidth() / 2 - 600, ofGetHeight() / 2 + 100);
 
   for (int f = 1; f <= a.size(); f++) {
@@ -60,13 +54,10 @@ void ofApp::draw() {
             // ((36 - layer) * 0.1) + 0.5;
             r *= 1.5 * MIN(0.01 + (m.distance(temp[k]) / 400.0), 5.0);
 
-            //  MAX(float(mouseX) / float(ofGetWindowWidth()), 0.1);
             // r *= (f / 8.0) + 0.2;
             float p = 10.0 / layer;
-            // ofPoint b = temp[(k + temp.size() - 1) % temp.size()];
             ofPoint b = temp[temp.getWrappedIndex(k - 1)];
             ofPoint a = temp[temp.getWrappedIndex(k + 1)];
-            // ofPoint a = temp[(k + 1) % temp.size()];
 
             ofVec2f normal = b - a;
             normal = normal.getPerpendicular();
@@ -75,7 +66,6 @@ void ofApp::draw() {
             r *= ofMap(ofNoise(temp[k].x / p, temp[k].y / p,
                                (f * 9.123) + (layer * 213.4123)),
                        0, 1, 0.2, 0.8);
-            // r *= 0.2;
             temp[k].x += normal.x * r;
             temp[k].y += normal.y * r;
 
@@ -87,7 +77,6 @@ void ofApp::draw() {
                          r;
           }
           temp.simplify();
-          // temp = temp.getSmoothed(1);
           ofFill();
 
           int a = 5;
@@ -117,40 +106,6 @@ void ofApp::draw() {
       }
     }
   }
-
-  return;
-  // for (int l = 0; l < linesOfTheFile.size(); l++) {
-  //   string line = linesOfTheFile[l];
-  //   // cout << line << endl;
-
-  //   vector<ofPath> paths = font.getStringAsPoints(line, true, true);
-  //   // for (int y = 0; y < ofGetHeight() - 100; y += 5) {
-  //   // ofSetColor(255, 255, 255, y / 5);
-  //   for (int i = 0; i < paths.size(); i++) {
-
-  //     vector<ofPolyline> lines = paths[i].getOutline();
-
-  //     for (int j = 0; j < lines.size(); j++) {
-
-  //       ofPolyline temp = lines[j].getResampledBySpacing(4);
-  //       for (int k = 0; k < temp.size(); k++) {
-  //         // temp[k].x += 50 * sin(temp[k].y * 0.04 + ofGetElapsedTimef());
-  //         // temp[k].y += l * 8.0;
-  //       }
-
-  //       // temp = temp.getSmoothed(MAX(mouseX, 1));
-  //       temp.draw();
-
-  //       //            for (int k = 0; k < temp.getVertices().size(); k++){
-  //       //                ofDrawCircle(temp.getVertices()[k], 2);
-  //       //            }
-
-  //       //            ofPolyline temp = lines[j].getSmoothed(MAX(1,
-  //       mouseX));
-  //       //            temp.draw();
-  //     }
-  //   }
-  // }
 }
 
 //--------------------------------------------------------------
